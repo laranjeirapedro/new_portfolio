@@ -1,10 +1,11 @@
 import React from "react";
-import {LayoutBase, FirstSection} from "./components";
+import {LayoutBase, FirstSection, SecondSection} from "./components";
 
 const Home = () => {
   return (
     <LayoutBase>
       <FirstSection />
+      <SecondSection />
     </LayoutBase>
   );
 }
