@@ -5,7 +5,7 @@ import { SocialMedia } from "../SocialMedia";
 
 export const FirstSection = () => {
   return (
-    <div className="bg-[#333333] min-w-full p-0 m-0 flex flex-col items-center">
+    <div className="bg-[#333333] min-w-full p-0 pb-4 m-0 flex flex-col items-center">
       <div>
         <section className="container mx-auto flex flex-row justify-between items-center p-[50px]">
           <div>
@@ -29,8 +29,8 @@ export const FirstSection = () => {
           </article>
         </section>
       </div>
-      <div className="p-2">
-        <Image src={Arrow} alt="arrow" />
+      <div>
+        <a href=""><Image src={Arrow} alt="arrow" /></a>
       </div>
     </div>
   );
