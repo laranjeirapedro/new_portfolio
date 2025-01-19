@@ -5,23 +5,24 @@ import { useForm } from "react-hook-form";
 import { sendEmail } from "@utils/send-email";
 
 export type FormData = {
-  fname: string;
+  name: string;
   email: string;
   message: string;
 };
 
 export const ContactForm: FC = () => {
-  const { register, handleSubmit } = useForm<FormData>();
+  const { register, handleSubmit, reset } = useForm<FormData>();
 
   function onSubmit(data: FormData) {
     sendEmail(data);
+    reset();
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="mb-5">
         <label
-          htmlFor="fname"
+          htmlFor="name"
           className="mb-3 block text-xl font-bold text-[#333333]"
         >
           Full Name
@@ -30,7 +31,7 @@ export const ContactForm: FC = () => {
           type="text"
           placeholder="Full Name"
           className="w-96 rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-[#A0D6FF] focus:shadow-md"
-          {...register("fname", { required: true })}
+          {...register("name", { required: true })}
         />
       </div>
 
@@ -64,10 +65,11 @@ export const ContactForm: FC = () => {
         ></textarea>
       </div>
 
-      <button className="hover:shadow-form rounded-md bg-[#A0D6FF] py-3 px-8 text-base font-bold text-[#333333] outline-none">
-        Submit
-      </button>
-
+      <div>
+        <button className="hover:shadow-form rounded-md bg-[#A0D6FF] py-3 px-8 text-base font-bold text-[#333333] outline-none">
+          Submit
+        </button>
+      </div>
     </form>
   );
 };

@@ -5,7 +5,7 @@ import Arrow from "../../../../public/arrow_light.svg";
 
 export const SecondSection = () => {
   return (
-    <div className="p-4 mx-14 flex flex-col items-center">
+    <div id="section2" className="p-4 mx-14 flex flex-col items-center">
       <section className="flex flex-row items-center">
         <h2 className="pr-2 text-6xl text-[#A0D6FF] font-bold">
           Recent Projects
@@ -63,7 +63,7 @@ export const SecondSection = () => {
         </div>
       </div>
       <div className="p-2 pt-4">
-        <a href=""><Image src={Arrow} alt="arrow" /></a>
+        <a href="#section3"><Image src={Arrow} alt="arrow" /></a>
       </div>
     </div>
   );

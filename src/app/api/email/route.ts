@@ -1,15 +1,12 @@
-import { type NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-import Mail from "nodemailer/lib/mailer";
+import { type NextRequest, NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
+import Mail from 'nodemailer/lib/mailer';
 
-export async function POST (request: NextRequest) {
+export async function POST(request: NextRequest) {
     const { email, name, message } = await request.json();
 
     const transport = nodemailer.createTransport({
-        service: "hotmail",
-        host: "smtp-mail.outlook.com",
-        port: 587,
-        secure: false,
+        service: 'gmail',
         auth: {
             user: process.env.MY_EMAIL,
             pass: process.env.MY_PASSWORD,
@@ -18,25 +15,25 @@ export async function POST (request: NextRequest) {
 
     const mailOptions: Mail.Options = {
         from: process.env.MY_EMAIL,
-        to: process.env.MY_EMAIL,
+        to: "pedrohl.m@hotmail.com",
         subject: `Message from ${name} (${email})`,
         text: message,
     };
 
     const sendMailPromise = () =>
         new Promise<string>((resolve, reject) => {
-            transport.sendMail(mailOptions, function(err) {
+            transport.sendMail(mailOptions, function (err) {
                 if (!err) {
-                    resolve ('Email sent');
+                    resolve('Email sent');
                 } else {
                     reject(err.message);
                 }
-            })
-        })
-    
+            });
+        });
+
     try {
         await sendMailPromise();
-        return NextResponse.json({ message: 'Email sent'});
+        return NextResponse.json({ message: 'Email sent' });
     } catch (err) {
         return NextResponse.json({ error: err }, { status: 500 });
     }

@@ -4,7 +4,7 @@ import { ContactForm } from "../ContactForm";
 
 export const ThirdSection = () => {
   return (
-    <div className="bg-[#333333] min-w-full p-4 m-0 flex flex-col items-center">
+    <div id="section3" className="bg-[#333333] min-w-full p-4 m-0 flex flex-col items-center h-screen">
       <div className="text-[#A0D6FF] w-[50%] ">
         <h4 className="text-center">
           Lorem Ipsum is simply dummy text of the printing and typesetting
