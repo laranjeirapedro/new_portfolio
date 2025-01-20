@@ -7,9 +7,9 @@ import TypingEffect from "../TypingEffect/TypingEffect";
 export const FirstSection = () => {
   const textToType = "Hey there! I'm <strong>Pedro Laranjeira</strong>.";
   return (
-    <div className="bg-[#333333] min-w-full p-0 pb-4 m-0 flex flex-col items-center h-screen">
-      <div className="pt-48">
-        <section className="container mx-auto flex flex-row justify-between items-center p-[50px]">
+    <div id="#section1" className="bg-[#333333] min-w-full p-0 pb-4 m-0 flex flex-col items-center min-h-screen">
+      <div className="2xl:pt-48">
+        <section className="container m-auto flex flex-row justify-between items-center p-[50px]">
           <div>
             <Image
               src={Photo}
