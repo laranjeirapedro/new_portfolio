@@ -7,16 +7,22 @@ export const Menu = () => {
 
   const handleClick = () => {
     setIsOpen(!isOpen);
-    if(isOpen) {
-        return (
-            <div>
-                <ul>
-                    <li><a href="#section1">Home</a></li>
-                    <li><a href="#section2">Projects</a></li>
-                    <li><a href="#section3">Contact</a></li>
-                </ul>
-            </div>
-        )
+    if (isOpen) {
+      return (
+        <div>
+          <ul>
+            <li>
+              <a href="#section1">Home</a>
+            </li>
+            <li>
+              <a href="#section2">Projects</a>
+            </li>
+            <li>
+              <a href="#section3">Contact</a>
+            </li>
+          </ul>
+        </div>
+      );
     }
   };
   return (
@@ -33,9 +39,7 @@ export const Menu = () => {
         ></span>
         <span
           className={`bg-[#333333] block transition-all duration-300 ease-out 
-            h-1 w-12 rounded-sm my-0.5 ${
-              isOpen ? "opacity-0" : "opacity-100"
-            }`}
+            h-1 w-12 rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"}`}
         ></span>
         <span
           className={`bg-[#333333] block transition-all duration-300 ease-out 
@@ -45,20 +49,29 @@ export const Menu = () => {
         ></span>
       </button>
       {isOpen && (
-        <div className="mt-4 bg-[#A0D6FF] p-4 rounded-md shadow-md absolute w-full">
-          <ul className="space-y-2">
+        <div className="ml-12 -mt-7 bg-[#A0D6FF] p-2 rounded-md shadow-md absolute w-9/12">
+          <ul className="flex flex-row text-center justify-center space-x-24 text-lg">
             <li>
-              <a href="#section1" className="text-[#333333] hover:underline font-bold">
+              <a
+                href="#section1"
+                className="text-[#333333] hover:underline font-bold"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href="#section2" className="text-[#333333] hover:underline font-bold">
+              <a
+                href="#section2"
+                className="text-[#333333] hover:underline font-bold"
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a href="#section3" className="text-[#333333] hover:underline font-bold">
+              <a
+                href="#section3"
+                className="text-[#333333] hover:underline font-bold"
+              >
                 Contact
               </a>
             </li>
