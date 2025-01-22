@@ -13,4 +13,14 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 
-export default eslintConfig;
+export default {
+  root: true,
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    ...eslintConfig,
+  ],
+  rules: {
+    'react/no-unescaped-entities': 'off',
+  },
+};
