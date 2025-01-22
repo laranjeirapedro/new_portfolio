@@ -7,23 +7,23 @@ import TypingEffect from "../TypingEffect/TypingEffect";
 export const FirstSection = () => {
   const textToType = "Hey there! I'm <strong>Pedro Laranjeira</strong>.";
   return (
-    <div id="#section1" className="bg-[#333333] min-w-full p-0 pb-4 m-0 flex flex-col items-center min-h-screen">
-      <div className="2xl:pt-48">
-        <section className="container m-auto flex flex-row justify-between items-center p-[50px]">
-          <div>
+    <div id="#section1" className="min-w-full bg-[#333333] xl:flex flex-col">
+      <div>
+        <section className="my-0 ml-5 flex flex-col xl:flex-row items-center space-y-10 p-4 xl:p-[50px] justify-between xl:space-x-48">
+          <div className="">
             <Image
               src={Photo}
               alt="profile_image"
-              className="max-w-64 rounded-full"
+              className="max-w-48 rounded-full sm:max-w-60 lg:max-w-64 xl:max-w-96"
             />
             <SocialMedia />
           </div>
-          <div className="max-w-[70%] border-2 border-black rounded-3xl p-5 shadow-custom bg-[#F0F4F8]">
+          <div className="border-2 border-black rounded-3xl p-2 lg:p-5 shadow-custom bg-[#F0F4F8]">
             <TypingEffect
               text={textToType}
-              className="text-[#A0D6FF] text-4xl"
+              className="text-[#A0D6FF] text-xl sm:text-2xl lg:text-3xl xl:text-4xl"
             />
-            <article>
+            <article className="text-xs sm:text-sm lg:text-base xl:text-xl">
               <br />I'm a <strong>Web Developer | Front-End</strong> who really enjoys
               coding responsive, interactive, and classy web applications by
               using JavaScript, React, HTML5, CSS3, and CMS platforms.
@@ -52,7 +52,7 @@ export const FirstSection = () => {
           </div>
         </section>
       </div>
-      <div>
+      <div className="flex justify-center pb-4">
         <a href="#section2">
           <Image src={Arrow} alt="arrow" />
         </a>

@@ -23,7 +23,7 @@ export const ContactForm: FC = () => {
       <div className="mb-5">
         <label
           htmlFor="name"
-          className="mb-3 block text-xl font-bold text-[#333333]"
+          className="mb-3 block text-xl xl:text-4xl font-bold text-[#333333]"
         >
           Full Name
         </label>
@@ -38,7 +38,7 @@ export const ContactForm: FC = () => {
       <div className="mb-5">
         <label
           htmlFor="email"
-          className="mb-3 block text-xl font-bold text-[#333333]"
+          className="mb-3 block text-xl xl:text-4xl font-bold text-[#333333]"
         >
           Email Address
         </label>
@@ -53,7 +53,7 @@ export const ContactForm: FC = () => {
       <div className="mb-5">
         <label
           htmlFor="message"
-          className="mb-3 block text-xl font-bold text-[#333333]"
+          className="mb-3 block text-xl xl:text-4xl font-bold text-[#333333]"
         >
           Message
         </label>
@@ -66,7 +66,7 @@ export const ContactForm: FC = () => {
       </div>
 
       <div>
-        <button className="hover:shadow-form rounded-md bg-[#A0D6FF] py-3 px-8 text-base font-bold text-[#333333] outline-none">
+        <button className="hover:shadow-form rounded-md bg-[#A0D6FF] py-3 px-8 text-base xl:text-2xl font-bold text-[#333333] outline-none">
           Submit
         </button>
       </div>

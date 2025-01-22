@@ -49,8 +49,8 @@ export const Menu = () => {
         ></span>
       </button>
       {isOpen && (
-        <div className="ml-12 -mt-7 bg-[#A0D6FF] p-2 rounded-md shadow-md absolute w-9/12">
-          <ul className="flex flex-row text-center justify-center space-x-24 text-lg">
+        <div className="absolute mt-4 lg:-mt-7 bg-[#A0D6FF] p-8 lg:p-2 rounded-md lg:ml-12 lg:w-8/12">
+          <ul className="flex flex-col text-xl lg:text-3xl space-y-4 lg:space-y-0 lg:flex-row justify-center lg:space-x-24 ">
             <li>
               <a
                 href="#section1"
