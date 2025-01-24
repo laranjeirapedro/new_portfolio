@@ -15,7 +15,7 @@ export default {
         'md': '768px',   // @media (min-width: 768px) { ... }
         'lg': '1024px',  // @media (min-width: 1024px) { ... }
         'xl': '1440px',  // @media (min-width: 1280px) { ... }
-        '2xl': '3440x', // @media (min-width: 1536px) { ... }
+        '2xl': '3000px', // @media (min-width: 1536px) { ... }
       },
     },
   },
