@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 export const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,6 +59,14 @@ export const Menu = () => {
               >
                 Home
               </a>
+            </li>
+            <li>
+              <Link
+                href="/projects"
+                className="text-[#333333] hover:underline font-bold"
+              >
+                GitHub Projects
+              </Link>
             </li>
             <li>
               <a
