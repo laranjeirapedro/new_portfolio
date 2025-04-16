@@ -4,13 +4,13 @@ This is my personal web development portfolio built with **Next.js**, **React**,
 
 ## Project Overview
 
-This portfolio serves as a showcase of my skills in front-end development, as well as my ability to build modern, responsive, and accessible websites. The website includes a variety of sections that demonstrate the technologies I have learned and applied, including my experience with **React**, **Next.js**, **TypeScript**, and **Tailwind CSS**.
+This portfolio serves as a showcase of my skills in front-end development, as well as my ability to build modern, responsive, and accessible websites. It includes a variety of sections that demonstrate the technologies I have learned and applied, including my experience with **React**, **Next.js**, **TypeScript**, and **Tailwind CSS**. In addition, it integrates the **GitHub API** to dynamically display real project data from my repositories.
 
 ## Features
 
 - **Responsive Design:** The portfolio is fully responsive, ensuring a seamless experience across devices of all sizes.
-- **Contact Form:** A simple form that allows users to reach out directly. It was created using React Form Hook and Nodemailer.
-
+- **Dynamic GitHub Projects Integration:** Projects are fetched from the GitHub API and filtered by topic. Each project displays title, description, homepage link (if available), and a color-coded language usage bar.
+- **Contact Form:** A simple form that allows users to reach out directly. It was created using React Hook Form and Nodemailer.
 
 ## Technologies Used
 
@@ -28,15 +28,19 @@ This portfolio serves as a showcase of my skills in front-end development, as we
 
 ### 2. **HeroSection**
 - A welcoming section that introduces the developer with a catchy message and CTA (Call to Action) to see the projects.
-  
+
 ### 3. **Projects Section**
-- Displays a list of personal and professional projects.
-- Each project has an image, title, description, and link to the project or code repository.
-  
-### 4. **Contact Form**
+- Fetches projects dynamically from the GitHub API.
+- Filters repositories by the "portfolio" topic.
+- Displays title, description, language, homepage link (if provided), and a dynamic language usage bar with color-coded representation.
+
+### 4. **LanguagesBar Component**
+- Retrieves data from the GitHub API's language endpoint.
+- Calculates the percentage usage of each language per project and renders a visual bar chart with color indicators for each language.
+
+### 5. **Contact Form**
 - A simple form that allows users to send messages directly to me.
 - Demonstrates basic form handling and validation in React.
-
 
 ## Learning Outcomes
 
@@ -46,17 +50,15 @@ This project allowed me to apply my knowledge and skills in:
 - **Next.js:** By leveraging Next.js, I was able to create a fast, SEO-friendly, and production-ready portfolio. The framework allowed me to implement routing and static site generation effectively.
 - **TypeScript:** Using TypeScript helped me write more maintainable code by providing static typing, reducing errors and improving collaboration in a team environment.
 - **Tailwind CSS:** Tailwind allowed me to quickly design a responsive and clean layout without the need for custom CSS. It also helped in maintaining consistency in design across the site.
+- **GitHub API:** Gained experience in integrating third-party APIs and handling asynchronous data fetching and filtering to enhance user experience.
 
 ## Future Improvements
 
-- **API Integration for Blog:** In the future, I plan to integrate an API to dynamically pull projects and a blog session with posts and other content.
-- **Advanced Contact Form:** I plan to enhance the contact form.
-- **Dynamic Projects Section:** Displays different projects with descriptions, images, and links to the live projects or repositories.
-- **Skills Section:** Showcases the main technologies and frameworks I am proficient in.
-Designed with a grid layout to display icons for each technology.
+- **API Integration for Blog:** In the future, I plan to integrate an API to dynamically pull blog posts and other content.
+- **Advanced Contact Form:** I plan to enhance the contact form with better validation and spam protection.
+- **Skills Section:** Showcases the main technologies and frameworks I am proficient in. Designed with a grid layout to display icons for each technology.
 - **Accessibility Improvements:** Adding better accessibility features like ARIA roles and focus states to improve the user experience for all visitors.
 - **Performance Optimizations:** I plan to analyze and optimize the performance further, using tools like Lighthouse and Web Vitals to ensure the site loads quickly on all devices.
-
 
 ## Conclusion
 
