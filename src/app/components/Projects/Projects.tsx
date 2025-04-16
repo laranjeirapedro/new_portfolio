@@ -18,12 +18,17 @@ export const Projects = () => {
   }, []);
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
       {repos.map((repo) => (
         <div
           key={repo.id}
           className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-lg transition"
         >
+          <img
+            src={`https://raw.githubusercontent.com/laranjeirapedro/${repo.name}/refs/heads/main/public/app-thumbnail.webp`}
+            alt={`${repo.name} thumbnail`}
+            className="w-full max-h-[210] rounded-lg mt-2"
+          />
           <h3 className="text-white text-xl font-semibold mb-2">{repo.name}</h3>
           <p className="text-sm text-gray-600 dark:text-gray-300">
             {repo.description || "No description"}
