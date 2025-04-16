@@ -6,7 +6,7 @@ export const SecondSection = () => {
   return (
     <div className="px-16">
       <div id="section2" className="p-4 mx-14 flex flex-col">
-        <h1 className="text-3xl font-bold mb-6">GitHub Projects</h1>
+        <h1 className="text-gray-800 text-3xl font-bold mb-6">Recent Projects</h1>
         <Projects />
       </div>
 

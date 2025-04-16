@@ -61,14 +61,6 @@ export const Menu = () => {
               </a>
             </li>
             <li>
-              <Link
-                href="/projects"
-                className="text-[#333333] hover:underline font-bold"
-              >
-                GitHub Projects
-              </Link>
-            </li>
-            <li>
               <a
                 href="#section2"
                 className="text-[#333333] hover:underline font-bold"
