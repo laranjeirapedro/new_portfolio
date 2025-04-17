@@ -27,7 +27,7 @@ export const Projects = () => {
           <img
             src={`https://raw.githubusercontent.com/laranjeirapedro/${repo.name}/refs/heads/main/public/app-thumbnail.webp`}
             alt={`${repo.name} thumbnail`}
-            className="w-full max-h-[210] rounded-lg mt-2"
+            className="w-full max-h-[210px] rounded-lg mt-2"
           />
           <h3 className="text-white text-xl font-semibold mb-2">{repo.name}</h3>
           <p className="text-sm text-gray-600 dark:text-gray-300">
