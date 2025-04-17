@@ -27,24 +27,27 @@ export const Projects = () => {
           <img
             src={`https://raw.githubusercontent.com/laranjeirapedro/${repo.name}/refs/heads/main/public/app-thumbnail.webp`}
             alt={`${repo.name} thumbnail`}
-            className="w-full max-h-[210] rounded-lg mt-2"
+            className="w-full max-h-[210px] rounded-lg mt-2"
           />
           <h3 className="text-white text-xl font-semibold mb-2">{repo.name}</h3>
-          <p className="text-sm text-gray-600 dark:text-gray-300">
+          <p className="min-h-[100px] text-sm text-gray-600 dark:text-gray-300">
             {repo.description || "No description"}
           </p>
-          <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-            <button className="w-20 m-4 md:w-28 p-2 border-solid border-[#F0F4F8] border-2 rounded-md bg-[#A0D6FF] text-[#333333] font-bold">
-              Git Hub
-            </button>
-          </a>
-          {repo.homepage && (
-            <a href={repo.homepage} target="_blank" rel="noopener noreferrer">
+          <div className="flex justify-between">
+            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
               <button className="w-20 m-4 md:w-28 p-2 border-solid border-[#F0F4F8] border-2 rounded-md bg-[#A0D6FF] text-[#333333] font-bold">
-                App
+                Git Hub
               </button>
             </a>
-          )}
+
+            {repo.homepage && (
+              <a href={repo.homepage} target="_blank" rel="noopener noreferrer">
+                <button className="w-20 m-4 md:w-28 p-2 border-solid border-[#F0F4F8] border-2 rounded-md bg-[#A0D6FF] text-[#333333] font-bold">
+                  App
+                </button>
+              </a>
+            )}
+          </div>
           <LanguagesBar repoName={repo.name} />
         </div>
       ))}
