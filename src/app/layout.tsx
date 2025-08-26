@@ -1,6 +1,3 @@
-import type { Metadata } from "next";
-import Script from "next/script";
-import { Analytics } from "@vercel/analytics/react"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.css";
 
@@ -14,11 +11,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Pedro's Portfolio",
-  description: "Pedro Laranjeira's Portfolio",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,32 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-3ED7BXVBN1`}
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-3ED7BXVBN1', {
-              page_path: window.location.pathname,
-            });
-          `,
-          }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <Analytics />
       </body>
     </html>
   );
